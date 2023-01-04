@@ -1,0 +1,8 @@
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="com.algaworks.algafood.modelo.Cliente"><rhs name\="com.algaworks.algafood.modelo.Cliente"/></lhs><lhs name\="com.algaworks.algafood.di.notificacao.Notificador"><rhs name\="com.algaworks.algafood.di.notificacao.NotificadorEmail"/></lhs><lhs name\="com.algaworks.algafood.di.notificacao.NotificadorEmail"><rhs name\="com.algaworks.algafood.di.notificacao.NotificadorEmail"/></lhs><lhs name\="com.algaworks.algafood.di.service.AtivacaoClienteService"><rhs name\="com.algaworks.algafood.di.service.AtivacaoClienteService"/></lhs><lhs name\="java.lang.Enum"><rhs name\="java.lang.annotation.RetentionPolicy"/><rhs name\="com.algaworks.algafood.di.notificacao.NivelUrgencia"/><rhs name\="org.springframework.boot.WebApplicationType"/></lhs><lhs name\="java.lang.constant.Constable"><rhs name\="java.lang.annotation.RetentionPolicy"/><rhs name\="com.algaworks.algafood.di.notificacao.NivelUrgencia"/><rhs name\="org.springframework.boot.WebApplicationType"/></lhs><lhs name\="com.algaworks.algafood.di.notificacao.NivelUrgencia"><rhs name\="com.algaworks.algafood.di.notificacao.NivelUrgencia"/></lhs><lhs name\="com.algaworks.algafood.domain.model.Cozinha"><rhs name\="com.algaworks.algafood.domain.model.Cozinha"/></lhs></history>
+content_assist_number_of_computers=15
+eclipse.preferences.version=1
+org.eclipse.jdt.ui.formatterprofiles.version=21
+spelling_locale_initialized=true
+typefilter_migrated_2=true
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true

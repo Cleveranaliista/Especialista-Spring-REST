@@ -1,0 +1,9 @@
+insert into cozinha (id,nome) values (1,'Indiana');
+insert into cozinha (id,nome) values (2,'Brasileira');
+insert into cozinha (id,nome) values (3,'Japonesa');
+insert into cozinha (id,nome) values (4,'Mexicana');
+
+insert into restaurante (nome, taxa_frete, cozinha_id) values ('Trem de Minas', 5, 1);
+insert into restaurante (nome, taxa_frete, cozinha_id) values ('Manuel do espeto', 6, 2);
+insert into restaurante (nome, taxa_frete, cozinha_id) values ('Ponte furada', 7, 3);
+insert into restaurante (nome, taxa_frete, cozinha_id) values ('Lagrepia', 8, 4);
