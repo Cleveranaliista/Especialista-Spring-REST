@@ -1,3 +1,0 @@
-INDEX VERSION 1.131+C:\Users\DELL\workspace-Projetos\Spring-Boot-Especialista\.metadata\.plugins\org.eclipse.jdt.core
-4079544754.index
-1865797976.index

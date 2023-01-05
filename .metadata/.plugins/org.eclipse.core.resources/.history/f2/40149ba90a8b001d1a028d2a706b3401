@@ -1,7 +1,0 @@
-insert into cozinha (nome) values ('Tailandeza');
-insert into cozinha (nome) values ('Indiana');
-insert into cozinha (nome) values ('Brasileira');
-insert into cozinha (nome) values ('Japonesa');
-insert into cozinha (nome) values ('Mexicana');
-insert into cozinha (nome) values ('Argentina');
-insert into cozinha (nome) values ('Francesa');
