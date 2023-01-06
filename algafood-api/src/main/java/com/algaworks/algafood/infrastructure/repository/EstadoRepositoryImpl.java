@@ -9,14 +9,15 @@ import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.algaworks.algafood.domain.model.Estado;
+import com.algaworks.algafood.domain.repository.EstadoRepository;
 
 @Component
-public class EstadoRepositoryImpl {
+public class EstadoRepositoryImpl implements EstadoRepository{
 
 	@PersistenceContext
 	private EntityManager manager;
 	
-	public List<Estado> todos(){
+	public List<Estado> listar(){
 		return manager.createQuery("from Estado", Estado.class)
 				.getResultList();
 	}

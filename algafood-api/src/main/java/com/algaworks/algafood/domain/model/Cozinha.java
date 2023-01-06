@@ -7,9 +7,14 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonRootName;
+
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
+//@JsonRootName("gastronomia")  //moda o nome do Root
 @Data
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Entity
@@ -21,6 +26,8 @@ public class Cozinha {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
+	//@JsonIgnore  // essa anotação remove o atributo da exibição
+	//@JsonProperty(value = "titulo") //muda o nome de exibição do atributo
 	@Column(nullable = false)
 	private String nome;
 	
