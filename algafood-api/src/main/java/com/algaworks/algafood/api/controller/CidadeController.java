@@ -29,18 +29,18 @@ public class CidadeController {
 
 	@Autowired
 	private CidadeRepository cidadeRepository;
-	
+
 	@Autowired
 	private CadastroCidadeService cadastroCidadeService;
-	
+
 	@Autowired
 	private CadastroCidadeService cadastroCidade;
-	
+
 	@GetMapping
 	public List<Cidade> lista() {
 		return cidadeRepository.findAll();
 	}
-	
+
 	@GetMapping(value = "/{cidadeId}")
 	public ResponseEntity<?> buscar(@PathVariable Long cidadeId) {
 		try {
@@ -53,44 +53,43 @@ public class CidadeController {
 		}
 		return ResponseEntity.notFound().build();
 	}
-	
+
 	@PostMapping
 	@ResponseStatus(HttpStatus.CREATED)
 	public ResponseEntity<?> adicionar(@RequestBody Cidade cidade) {
 		try {
 			cidade = cadastroCidadeService.salvar(cidade);
-			
+
 			return ResponseEntity.status(HttpStatus.CREATED).body(cidade);
-			
+
 		} catch (EntidadeNaoEncontradaException e) {
 			return ResponseEntity.badRequest().body(e.getMessage());
 		}
 	}
-	
+
 	@PutMapping("/{cidadeId}")
-	public ResponseEntity<?> atualizar(@PathVariable Long cidadeId,
-			@RequestBody Cidade cidade) {
+	public ResponseEntity<?> atualizar(@PathVariable Long cidadeId, @RequestBody Cidade cidade) {
 		try {
 			// Podemos usar o orElse(null) também, que retorna a instância de cidade
 			// dentro do Optional, ou null, caso ele esteja vazio,
-			// mas nesse caso, temos a responsabilidade de tomar cuidado com NullPointerException
+			// mas nesse caso, temos a responsabilidade de tomar cuidado com
+			// NullPointerException
 			Cidade cidadeAtual = cidadeRepository.findById(cidadeId).orElse(null);
-			
+
 			if (cidadeAtual != null) {
 				BeanUtils.copyProperties(cidade, cidadeAtual, "id");
-				
+
 				cidadeAtual = cadastroCidade.salvar(cidadeAtual);
 				return ResponseEntity.ok(cidadeAtual);
 			}
-			
+
 			return ResponseEntity.notFound().build();
-		
+
 		} catch (EntidadeNaoEncontradaException e) {
-			return ResponseEntity.badRequest()
-					.body(e.getMessage());
+			return ResponseEntity.badRequest().body(e.getMessage());
 		}
 	}
-	
+
 	@DeleteMapping("/{cidadeId}")
 	public ResponseEntity<Cidade> remover(@PathVariable Long cidadeId) {
 		try {
@@ -103,15 +102,3 @@ public class CidadeController {
 		}
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
